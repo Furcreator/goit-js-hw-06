@@ -21,9 +21,10 @@ form.addEventListener("submit", (event) => {
 
   if (email === "" || password === "") {
     alert("A simple danger alert - check it out!");
-  } else {
+    return;
+  } 
+  else {
     console.log(dataForm);
+    event.currentTarget.reset();
   }
-
-  event.currentTarget.reset();
 });
